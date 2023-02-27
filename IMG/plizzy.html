@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L Work LeaderBoard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--шрифты-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-img {
+      /* Используемое изображение */
+      background-image: url("Group1.png");
+      min-height: 710px;
+      /* Центр и масштаб изображения */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* Необходимые для позиционирования навигации */
+      position: relative;
+    }
+    /* Положение контейнера навигации внутри изображения */
+    
+    .container {
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 590px;
+      width: auto;
+    }
+    
+    .container1 {
+      position: absolute;
+      margin-top: 5px;
+      margin-left: 50px;
+      width: auto;
+      height: auto;
+    }
+    
+    .container2 {
+      position: absolute;
+      top: 880px;
+      left: 42%;
+      width: 500px;
+      height: 200px;
+    }
+    
+    .container3 {
+      position: absolute;
+      top: 1030px;
+      left: 42%;
+      width: 700px;
+      height: 200px;
+    }
+    
+    .containertable {
+      position: absolute;
+      top: 1400px;
+      left: 20%;
+      width: 60%; 
+    
+    }
+
+  
+    
+    /* Навигационная панель */
+    
+    .topnav {
+      overflow: hidden;
+      padding-left: 340px
+    }
+    
+    .topnav1 {
+      overflow: hidden;
+      float: left;
+      color: #f2f2f2;
+      text-align: left;
+      padding: 18px 3px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav2 {
+      overflow: hidden;
+      float: left;
+      color: #f2f2f2;
+      text-align: left;
+      padding: 18px 3px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .otstup {
+      overflow: hidden;
+      float: left;
+      margin-top: 20px;
+    }
+    /* Ссылки на навигационную панель */
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 18px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      font-size: 17.5px;
+      color: #ffffff;
+    }
+    
+    .h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff
+    }
+    
+    .h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff
+    }
+    
+    .h3 {
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 100px;
+      line-height: 134px;
+      font-family: 'Montserrat', sans-serif;
+      color: #d6d6d6;
+    }
+    
+    .ellipse {
+      position: absolute;
+      top: 950px;
+      left: 300px;
+      width: 200px;
+      height: 200px;
+      background: #6350DB;
+      filter: blur(100px);
+    }
+    
+    .ellipse2 {
+      position: absolute;
+      top: 1000px;
+      left: 650px;
+      width: 500px;
+      height: 100px;
+      background: #6350DB;
+      filter: blur(100px);
+    }
+    
+    .nwlogo {
+      position: absolute;
+      top: 900px;
+      left: 100px;
+      width: 200px;
+      height: 200px;
+    }
+    
+    .rectangle {
+      position: absolute;
+      width: 5px;
+      height: 370px;
+      top: 860px;
+      left: 40%;
+      background: #706D6D;
+    }
+
+    
+    .cellcolor1 {
+      background-color: #404040
+    }
+    
+    .cellcolor2 {
+      background-color: #515151
+    }
+    
+    .cellcolor3 {
+      background-color: rgb(89, 0, 255);
+    }
+    
+    .minilogotable {
+      text-align: right;
+      padding: 4px 1% 0px 0px;
+      width: 70px;
+    }
+    
+    .zagolovoktable {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+      padding: 10px 0px 10px 1%;
+      color: #ffffff;
+    }
+    
+    .Rank_table {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: right;
+      font-family: 'Roboto', sans-serif;
+      color: #D3D4D2;
+      padding: 6px 1% 6px 0px;
+    }
+    
+    .Player_table {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      color: #D3D4D2;
+      padding: 6px 0px 6px 1%;
+      width: 80%;
+    }
+    
+    .Sales_table {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: #D3D4D2;
+    }
+    
+    .nick_table {
+      font-style: bold;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff;
+      padding: 6px 0px 6px 1%;
+    }
+    
+    .golda_table {
+      font-style: bold;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff;
+    }
+    .number_table { 
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      text-align: right;
+      font-family: 'Roboto', sans-serif;
+      padding: 3px 2.3% 3px 0px;
+      color: #ffffff;
+    }
+    
+    table {
+      border-collapse: collapse;
+      border: 0px solid rgb(255, 255, 255);
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+    
+    td,
+    th {
+      border: 0px solid rgb(190, 190, 190);
+    }
+
+  </style>
+</head>
+
+<body bgcolor="#2D2B2B" >
+  <div class="bg-img"> <!--добавляем картинку игры-->
+    <div class="container"> 
+      <div class="topnav h2"> <!--ссылкм менюшки-->
+        <a href="https://lwork.gitbook.io/new-world/" target="_blank">Гитбук</a>
+        <a href="https://t.me/justlwork" target="_blank">Канал</a>
+        <a href="https://t.me/lworkchat" target="_blank">Чат</a>
+        <a href="https://discord.gg/Ej84a6g3gP" target="_blank">Дискорд</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyTXJ4qaI961xBZMIrlALFlL3ruKGGv38U2I7hdbK7O9_hfQ/viewform" target="_blank">Подать заявку на продажу</a>
+      </div>
+    </div>
+    <div class="container1"> <!--контейнер для верхней менюшки слево-->
+      <div class="topnav1 h1">
+        L WORK
+      </div>
+      <div class="topnav1">
+        <img src="logo.svg" height="35px" width="35px">
+      </div>
+    </div>
+
+    <div class="ellipse"></div> <!--заблюренный кружок, типо свечение-->
+    <div class="nwlogo"> <img src="nwlogo.svg"> </div> <!--лого игры-->
+    <div class="rectangle"> </div> <!--вертикальная серая линия-->
+
+    <div class="ellipse2"></div>
+    <div class="container2">
+
+      <div class="topnav2 h3">
+        Leaderboard
+      </div>
+    </div>
+    <div class="container3">
+      <div class="topnav2 h3">
+        by L Work
+      </div>
+      <div class="topnav2 otstup">
+        <img src="logo.svg" height="100px" width="100px">
+      </div>
+    </div>
+    
+
+
+
+    <table class="containertable"> <!--контейнер для таблица-->
+      <tr>
+        <td class="minilogotable cellcolor1"> <!--miniligotable для правильно распложеия изображений внутри ячеек, сellcolor - цвета ячеек-->
+          <img src="./IMG/image 5.svg" width="80%" height="80%"></img>
+        </td>
+        <td colspan="2" class="zagolovoktable cellcolor1"> <!--стиль для заголовк таблицы-->
+          NEW WORLD GOLD SALES LEADERBOARD
+        </td>
+      </tr>
+      <tr>
+        <td class="Rank_table cellcolor2">
+          Rank
+        </td>
+        <td class="Player_table cellcolor2">
+          Player
+        </td>
+        <td class="Sales_table cellcolor2">
+          Sales
+          <img src="./IMG/golda.svg"> </img>
+        </td>
+      </tr>
+      <tr>
+        <td class="minilogotable cellcolor1"><img src="./IMG/number1.svg" width="100%" height="100%"></td>
+        <td class="nick_table cellcolor1">
+          @busel100
+        </td>
+        <td class="golda_table cellcolor1"> 800k </td>
+      </tr>
+      <tr>
+        <td class="minilogotable cellcolor2">
+          <img src="2place.svg" width="100%" height="100%"> 
+        </td>
+        <td class="nick_table cellcolor2">
+          @robi_sl
+        </td>
+        <td class="golda_table cellcolor2">
+          500k
+        </td>
+      </tr>
+      <tr>
+        <td class="minilogotable cellcolor1">
+          <img src="3place.svg" width="100%" height="100%">
+        </td>
+        <td class="nick_table cellcolor1">
+          @sad_salo
+        </td>
+        <td class="golda_table cellcolor1">
+          400k
+        </td>
+      </tr>
+      <tr>
+        <td class="number_table cellcolor2">
+          4
+        </td>
+        <td class="nick_table cellcolor2">
+          @maksonch1k1337
+        </td>
+        <td class="golda_table cellcolor2">
+          300k 
+        </td>
+      </tr>
+    </table>
+  </div>
+   
+</body>
+
+</html>
